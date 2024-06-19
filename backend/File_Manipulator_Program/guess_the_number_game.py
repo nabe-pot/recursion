@@ -16,17 +16,15 @@ random_number = random.randint(n, m)
 
 print("==================================================================")
 print("I have a number between", n, "and", m, ". Can you guess my number?")
-user_guess = int(input("Enter your guess: "))
 
 for _ in range(number_of_attempts - 1):
-    if user_guess != random_number:
-        print("====================================")
-        print("Wrong! Try again.")
-        user_guess = int(input("Enter your guess: "))
-    else:
+    user_guess = int(input("Enter your guess: "))
+    if user_guess == random_number:
         print("=============================================")
         print("Congratulations! You have guessed the number.")
         break
-
-print("You Lose")
-
+    else:
+        print("=============================================")
+        print("Wrong! Try again.")
+else:
+    print("You lose. The correct number was", random_number)
