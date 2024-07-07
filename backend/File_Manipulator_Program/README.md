@@ -38,3 +38,9 @@
     - replace-string
       - `replace-string {inputpath} {needle} {newstring}`
         - inputpathの内容のneedleをnewstringに置換する
+- file_converter.py
+  - コマンドラインで起動し、マークダウンを HTML に変換するプログラム
+  - 起動方法
+    - `python converter/converter.py markdown {inputpath} {outputpath}`
+      - inputpath : マークダウンファイルのパス
+      - outputpath : 書き出されたHTMLファイルを配置するパス
